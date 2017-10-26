@@ -10,3 +10,15 @@
 - `cd meteor`
 - `meteor npm install`
 - `meteor`
+
+### react-native
+
+- `cd react-native`
+- `npm install`
+- `npm start`
+
+### ios
+- `npm run ios`
+
+### android
+- `npm run android`
