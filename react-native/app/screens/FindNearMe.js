@@ -9,6 +9,7 @@ import { connectAlert } from '../components/Alert';
 class FindNearMe extends Component {
   static propTypes = {
     alertWithType: PropTypes.func,
+    navigation: PropTypes.object,
   }
 
   constructor(props) {
@@ -30,7 +31,7 @@ class FindNearMe extends Component {
       if (err) {
         this.props.alertWithType('error', 'Error', err.reason);
       } else {
-        console.log('locations', locations);
+        this.props.navigation.navigate('NearMe', { locations }); // New addition
       }
       this.setState({ loading: false });
     });
